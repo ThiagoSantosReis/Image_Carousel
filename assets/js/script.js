@@ -5,6 +5,16 @@ const btn_proximo = document.querySelector('.proximo');
 
 let cont = 0;
 const slideW = car_imgs[0].clientWidth;
+const intervalo = 3000
+
+function proximo_slide(){
+    if (cont >= car_imgs.length - 1) {
+        cont = 0
+    }else{
+        cont++;
+    }
+    car_slide.style.transform = `translateX(${-cont * slideW}px)`;
+}
 
 btn_anterior.addEventListener('click', (e) => {
     e.preventDefault()
@@ -19,11 +29,7 @@ btn_anterior.addEventListener('click', (e) => {
 
 btn_proximo.addEventListener('click', (e) => {
     e.preventDefault()
-    if (cont >= car_imgs.length - 1) {
-        cont = 0
-    }else{
-        cont++;
-    }
-    
-    car_slide.style.transform = `translateX(${-cont * slideW}px)`;
+    proximo_slide()
 });
+
+setInterval(proximo_slide, intervalo)
