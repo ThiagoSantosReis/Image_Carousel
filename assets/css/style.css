@@ -1,0 +1,35 @@
+.car-box {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+.slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+.slide img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+.btn-car {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+
+.btn-car.proximo {
+    right: 0;
+  }
+
+.btn-car.anterior {
+    left: 0;
+  }
