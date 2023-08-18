@@ -1,3 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #00FF00, #008000); 
+    font-family: Arial, sans-serif;
+  }
+
 .car-box {
     width: 80%;
     margin: auto;
@@ -8,11 +15,13 @@
 .slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
+
   }
 
 .slide img {
     width: 100%;
     object-fit: cover;
+    
   }
 
 .btn-car {

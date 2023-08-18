@@ -8,14 +8,22 @@ const slideW = car_imgs[0].clientWidth;
 
 btn_anterior.addEventListener('click', (e) => {
     e.preventDefault()
-     if (cont <= 0) return;
-     cont--;
+    if (cont <= 0){
+        cont = car_imgs.length - 1
+    }else{
+        cont--;
+    }
+     
     car_slide.style.transform = `translateX(${-cont * slideW}px)`;
 });
 
 btn_proximo.addEventListener('click', (e) => {
     e.preventDefault()
-    if (cont >= car_imgs.length - 1) return;
-    cont++;
+    if (cont >= car_imgs.length - 1) {
+        cont = 0
+    }else{
+        cont++;
+    }
+    
     car_slide.style.transform = `translateX(${-cont * slideW}px)`;
 });
